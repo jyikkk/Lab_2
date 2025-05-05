@@ -1,3 +1,4 @@
+import statistics
 
 def display_main_menu():
     print("Enter some numbers separated by commas (e.g. 5, 67, 32)")
@@ -21,6 +22,9 @@ def calc_average_temp(nl):
         i += 1
     y = float(y/n)
     return y
+
+def median_temp(nl):
+    print(statistics.median(nl))
 
 def max_temperature(nl):
     x = nl
@@ -49,6 +53,8 @@ def main():
     print("You provided: " + str(num_list))
     average = calc_average_temp(num_list)
     print("The average is: " + str(average))
+    median = median_temp(num_list)
+    print("The median is: " + median)
     max = max_temperature(num_list)
     print("From the list, the largest number is: "+ str(max))
     min = min_temperature(num_list)
